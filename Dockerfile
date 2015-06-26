@@ -8,6 +8,7 @@ RUN apt-get update && \
 # setup project structure
 RUN mkdir -p $GOPATH/src/github.com/influxdb && \
   cd $GOPATH/src/github.com/influxdb && \
+  git clone -b client-fix https://github.com/alvaromorales/influxdb.git && \
   git clone https://github.com/influxdb/telegraf.git
 
 ADD build.sh /build.sh
