@@ -1,0 +1,48 @@
+# Telegraf configuration
+
+# TODO: configure params with environment variables
+
+# Configuration for influxdb server to send metrics to
+[influxdb]
+url = "http://influxdb:8086" # required.
+database = "grafana" # required.
+username = "root"
+password = "root"
+
+# Configuration for telegraf itself
+[agent]
+interval = "1s"
+debug = false
+
+# PLUGINS
+
+# Read metrics about cpu usage
+[cpu]
+  # no configuration
+
+# Read metrics about disk usage by mount point
+[disk]
+  # no configuration
+
+# Read metrics about docker containers
+[docker]
+  # no configuration
+
+# Read metrics about disk IO by device
+[io]
+  # no configuration
+
+# Read metrics about memory usage
+[mem]
+  # no configuration
+
+# Read metrics about network interface usage
+[net]
+
+# Read metrics about swap memory usage
+[swap]
+  # no configuration
+
+# Read metrics about system load
+[system]
+  # no configuration
